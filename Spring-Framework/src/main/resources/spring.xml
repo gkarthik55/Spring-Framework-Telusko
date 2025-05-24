@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="person" class="com.learn.Person" autowire="byType">
+		<!-- 	<bean id="person" class="com.learn.Person" autowire="byName"> -->
+		<!-- 		<property name="comp" ref="lap1"/> -->
+		<!-- 		<property name="comp" ref="comp1"/> -->
+		
+		<!-- Setter Injection -->
+		<property name="age" value="12"/>
+		<property name="salary" value="25000"/>
+		
+		<!-- Constructor Injection -->
+		<!-- 		<constructor-arg index="0" value="14"/> -->
+		<!-- 		<constructor-arg index="1" value="25000"/> -->
+	</bean>
+	
+	<bean id="comp" class="com.learn.Laptop" primary="true">
+	</bean>
+	
+	<!-- 	<bean id="lap1" class="com.learn.Laptop"> -->
+	<!-- 	</bean> -->
+	
+	<bean id="comp1" class="com.learn.Desktop">
+	</bean>
+</beans>
